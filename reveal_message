@@ -1,0 +1,10 @@
+from PIL import Image
+import stepic
+
+# Load image with secret
+secret_image = Image.open("secret_image.png")
+
+# Extract hidden message
+decoded_message = stepic.decode(secret_image)
+
+print("🔓 Hidden Message:", decoded_message)
