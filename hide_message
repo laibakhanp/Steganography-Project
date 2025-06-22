@@ -1,0 +1,16 @@
+from PIL import Image
+import stepic
+
+# Load original image
+image = Image.open("cover.png")  # Replace with your image name
+
+# Your secret message
+message = "This is a secret from Laiba!"
+
+# Hide the message
+encoded_image = stepic.encode(image, message.encode())
+
+# Save the new image with the hidden message
+encoded_image.save("secrettt_image.png")
+
+print("✅  HERE COMES THE SECOND HIDDEN MESSAGE !")
